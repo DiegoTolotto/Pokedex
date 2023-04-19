@@ -43,13 +43,16 @@ function App() {
           <input type='text' onChange={handleChange}  placeholder='Enter Pokemon' />
         </label>
       </form>
-      {/* {pokemonData.map((data) => {
+      {pokemonData.map((data) => {
         return(
           <div>
+            <img src={data.sprites.other.home["front_default"]}/>
             <div>{data.name}</div>
+            <div>{pokemonType}</div>
+
           </div>
         )
-      })} */}
+      })}
     </div>
   );
 }
