@@ -11,27 +11,28 @@ function App() {
       const toArray = [];
 
       try {
-        const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-        const res = await axios.get(url)
+        const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+        const res = await axios.get(url);
 
-        toArray.push(res.data)
-        setPokemonData(toArray)
+        toArray.push(res.data);
+        setPokemonData(toArray);
 
         console.log(res)
       } catch (error) {
         console.log(error)
       }
 
-    }
+    };
+    console.log(pokemonData)
     // Função que define os dados a APi;
     const handleChange = (e) => {
       setPokemon(e.target.value.toLowerCase())
-    }
+    };
     // Função que envias os dados para a APi;
     const handleSubmit = (e) => {
       e.preventDefault();
       getPokemon();
-    }
+    };
 
   return (
     <div className="App">
@@ -41,11 +42,13 @@ function App() {
           <input onChange={handleChange}></input>
         </label>
       </form>
-      {pokemonData.map((data) => {
+      {/* {pokemonData.map((data) => {
         return(
-          <div>{data.name}</div>
+          <div>
+            <div>{data.name}</div>
+          </div>
         )
-      })}
+      })} */}
     </div>
   );
 }
