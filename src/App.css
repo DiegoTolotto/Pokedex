@@ -1,10 +1,23 @@
-.App {
-  text-align: center;
+@keyframes color {
+  0%   { background: #ff0000; }
+  20%  { background: #c41313; }
+  40%  { background: #993b3b; }
+  60%  { background: #b45050; }
+  80%  { background: #cf2828; }
+  100% { background: #ff0000; }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  background: #ff0000;
+  animation: color 9s infinite linear;
+  height: 400px;
+  width: 100%;
+}
+
+
+img {
+  height: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

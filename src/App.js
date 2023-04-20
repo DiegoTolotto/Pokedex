@@ -27,7 +27,7 @@ function App() {
       }
     };
     const handleChange = (e) => {
-      setPokemon(e.target.value.toLowerCase())
+     setPokemon(e.target.value.toLowerCase())
     }
   
     const handleSubmit = (e) => {
@@ -40,15 +40,17 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label>
           {/* Input que vai definir o pokemon que estamos procurando */}
-          <input type='text' onChange={handleChange}  placeholder='Enter Pokemon' />
+          <input type='number' onChange={handleChange}  placeholder='Enter Pokemon' />
         </label>
       </form>
       {pokemonData.map((data) => {
         return(
           <div>
-            <img src={data.sprites.other.home["front_default"]}/>
-            <div>{data.name}</div>
-            <div>{pokemonType}</div>
+            <img 
+              alt={data.name} 
+              src={data.sprites.other.home["front_default"]}/>
+            <div className='nome'>{data.name}</div>
+            <div className='tipo'>{pokemonType}</div>
 
           </div>
         )
