@@ -45,12 +45,15 @@ function App() {
       </form>
       {pokemonData.map((data) => {
         return(
-          <div>
+          <div className='body'>
             <img 
               alt={data.name} 
               src={data.sprites.other.home["front_default"]}/>
-            <div className='nome'>{data.name}</div>
-            <div className='tipo'>{pokemonType}</div>
+              <div className='info'>
+                <div className='nome'>{data.name}</div>
+                <div>100</div>
+                <div className='tipo'>{pokemonType}</div>
+              </div>
 
           </div>
         )

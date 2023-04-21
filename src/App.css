@@ -1,24 +1,46 @@
 @keyframes color {
-  0%   { background: #ff0000; }
-  20%  { background: #c41313; }
-  40%  { background: #993b3b; }
-  60%  { background: #b45050; }
-  80%  { background: #cf2828; }
-  100% { background: #ff0000; }
+  0%   { background: #66ff00; }
+  20%  { background: #ffffff; }
+  40%  { background: #846eb9; }
+  60%  { background: #c5a4a4; }
+  80%  { background: #c59845; }
+  100% { background: #70e721; }
 }
 
 .App {
   text-align: center;
-  background: #ff0000;
-  animation: color 9s infinite linear;
-  height: 400px;
+  background-color: #ff0000;
+  height: 42100px;
   width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
 img {
+  background: #ff0000;
+  animation: color 9s infinite linear;
   height: 200px;
+  margin: 20px 0 10px 0;
+  border: 20px solid white;
 }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nome, .tipo {
+  background-color: #282c34;
+  height: 11%;
+  width: 160%;
+  margin: 60% 10% 0 50%;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
